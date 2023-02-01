@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finanzas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navLink gastos">Gastos</div>
+        <div class="navLink ingresos">Ganancias</div>
+        <div class="navLink download" id="download">Descarga</div>
+    </nav>
+    <main>
+    <div class="tableMargin">
+    <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Detalle</th>
+            <th>Ganancia</th>
+            <th>Gasto</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+      </table>
+    </div>
+    <div class="box-info">
+      <div class="box saldo">
+        <h1>$<span id="saldo">0</span></h1>
+        <p>Saldo Actual</p>
+      </div>
+      <div class="box ganancia">
+        <h1>$<span id="ganancias">0</span></h1>
+        <p> Ganancia total</p>
+      </div>
+      <div class="box gasto">
+        <h1>$<span id="gasto">0</span></h1>
+        <p>Gasto total</p>
+      </div>
+      <div class="box dolares">
+        <h1>$<span id="saldoDolares">0</span></h1>
+        <p>Saldo en dolares</p>
+      </div>
+    </div>
+</main>
+
+
+
+<div class="add" id="add">
+  <form action="" id="formulario">
+    <h1 id="tituloForm">haber</h1>
+    <label class="labelDate">
+      <h2>Fecha</h2>
+      <div class="fechalabel">
+        <input
+          type="text"
+          placeholder="dia"
+          id="day"
+          name="day"
+          maxlength="2"
+          style="width: 35px"
+          autocomplete="off"
+        />
+
+        <input
+          type="text"
+          placeholder="mes"
+          id="month"
+          name="month"
+          maxlength="2"
+          style="width: 35px"
+          autocomplete="off"
+        />
+
+        <input
+          type="text"
+          placeholder="año"
+          id="year"
+          name="year"
+          maxlength="4"
+          style="width: 55px"
+          autocomplete="off"
+        />
+      </div>
+    </label>
+    <label>
+      <h2>Nombre</h2>
+      <input type="text" 
+      placeholder="Nombre" 
+      name="Nombre" 
+      id="inputNombre"
+      autocomplete="off"/>
+    </label>
+    <ul id="suggestions"></ul>
+    <label>
+      <h2>Monto</h2>
+      <input
+        type="text"
+        class="inputNumber"
+        id="monto"
+        placeholder="monto"
+        name="monto"
+        autocomplete="off"
+      />
+    </label>
+    <label>
+      <h2>Detalle</h2>
+      <input type="text" placeholder="Detalles" name="Detalles" />
+    </label>
+    <br><br>
+    <label>
+      <button id="Save" class="Save">Guardar</button>
+    </label>
+  </form>
+  <p class="Close">Salir</p>
+</div>
+<script src="js/class/List.js"></script>
+<script src="js/class/excelExporter.js"></script>
+<script src="js/class/xlsx.full.min.js"></script>
+<script src="js/class/dropdown.js"></script>
+<script src="js/class/Ars_to_Usd.js"></script>
+<script src="js/class/GetNumbers.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
